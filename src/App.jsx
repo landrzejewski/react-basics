@@ -1,84 +1,50 @@
-import computerImage from './assets/computer-tech.svg'
-import {CORE_CONCEPTS} from "./data.js";
-// import {Fragment} from "react";
-
-const prefixes = ['Fundamental', 'Core', 'Main'];
-
-function getRandomPrefix() {
-    const index = Math.floor(Math.random() * (3));
-    return prefixes[index];
-}
-
-function Header() {
-    return (
-        <header>
-            <div className="logo">
-                <img src={computerImage} alt="Computer"/>
-            </div>
-            <h1>Computer Technology</h1>
-            <p>
-                {getRandomPrefix()} computer concepts you will need to understand modern
-                computing systems!
-            </p>
-        </header>
-    );
-}
-
-function CoreConcept({title, description}) {
-    return (
-        <div>
-            <li>
-                <h3>{title}</h3>
-                <p>{description}</p>
-            </li>
-        </div>
-    )
-}
-
-/*function CoreConcept(props) {
-    return (
-        <div>
-            <li>
-                <h3>{props.title}</h3>
-                <p>{props.description}</p>
-            </li>
-        </div>
-    )
-}*/
+import {CORE_CONCEPTS, EXAMPLES} from "./data.js";
+import Header from "./components/Header/Header.jsx";
+import CoreConcept from "./components/CoreConcept.jsx";
+import TabButton from "./components/TabButton.jsx";
+import {useState} from "react";
 
 function App() {
+    // let selectedTab = 'None';
+
+    const [selectedTab, setSelectedTab] = useState(0);
+
+    function onTabSelected(index) {
+        // selectedTab = index;
+        // setSelectedTab((lastIndex) => index);
+        setSelectedTab(index);
+    }
+
     return (
         <>
             <Header/>
             <main>
                 <section id="core-concepts">
+                    <h2>Computer Fundamentals</h2>
                     <ul>
-                        {/*<CoreConcept
-                            title={CORE_CONCEPTS[0].title}
-                            description={CORE_CONCEPTS[0].description}
-                        />
-                        <CoreConcept {...CORE_CONCEPTS[1]}/>
-                        <CoreConcept {...CORE_CONCEPTS[2]}/>
-                        <CoreConcept {...CORE_CONCEPTS[3]}/>*/}
                         {
-                            CORE_CONCEPTS.map(item  => (
+                            CORE_CONCEPTS.map(item => (
                                 <CoreConcept key={item.title} {...item}/>
                             ))
                         }
                     </ul>
                 </section>
+                <section id="examples">
+                    <h2>Examples</h2>
+                    <menu>
+                        <TabButton onSelect={()=> onTabSelected(0)}>Hardware</TabButton>
+                        <TabButton onSelect={()=> onTabSelected(1)}>Software</TabButton>
+                        <TabButton onSelect={()=> onTabSelected(2)}>Networking</TabButton>
+                        <TabButton onSelect={()=> onTabSelected(3)}>Security</TabButton>
+                    </menu>
+                    <div id="tab-content">
+                        <h3>{EXAMPLES[selectedTab].title}</h3>
+                        <p>{EXAMPLES[selectedTab].description}</p>
+                    </div>
+                </section>
             </main>
         </>
     )
 }
-
-/*function App() {
-    return (
-        <Fragment>
-            <div>1</div>
-            <div>2</div>
-        </Fragment>
-    )
-}*/
 
 export default App;

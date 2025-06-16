@@ -21,25 +21,25 @@ export const CORE_CONCEPTS = [
   },
 ];
 
-export const EXAMPLES = {
-  components: {
+export const EXAMPLES = [
+  {
     title: 'Hardware Components',
     description:
       'Computer hardware consists of various physical components that work together to form a complete system. These include the CPU, RAM, storage devices, and peripherals.'
   },
-  jsx: {
+  {
     title: 'Software Types',
     description:
       'Software can be categorized into different types based on their function and purpose, such as operating systems, application software, and utility software.'
   },
-  props: {
+  {
     title: 'Networking Protocols',
     description:
       'Networking protocols are standardized rules that determine how data is transmitted between devices on a network, ensuring reliable communication.',
   },
-  state: {
+  {
     title: 'Security Measures',
     description:
       'Computer security involves implementing various measures to protect systems and data from unauthorized access, attacks, and other threats.',
-  },
-};
+  }
+];
