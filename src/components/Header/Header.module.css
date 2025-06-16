@@ -1,20 +1,20 @@
-header {
+.header {
     text-align: center;
     margin: 3rem 0;
 }
 
-header .logo {
+.logo {
     display: flex;
     justify-content: center;
     margin-bottom: 1rem;
 }
 
-header .logo svg {
+.img {
     height: 5rem;
     width: 10rem;
 }
 
-header h1 {
+.header-title {
     margin: 0;
     font-family: "Roboto Condensed", sans-serif;
     font-size: 5rem;
@@ -24,7 +24,7 @@ header h1 {
     filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.5));
 }
 
-header p {
+.text {
     margin: 0;
     font-size: 1.25rem;
     color: #64a0b0;

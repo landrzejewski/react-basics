@@ -1,5 +1,5 @@
 import computerImage from "../../assets/computer-tech.svg";
-import "./Header.css";
+import classes from "./Header.module.css";
 
 const prefixes = ['Fundamental', 'Core', 'Main'];
 
@@ -10,12 +10,12 @@ function getRandomPrefix() {
 
 function Header() {
     return (
-        <header>
-            <div className="logo">
-                <img src={computerImage} alt="Computer"/>
+        <header className={classes.header}>
+            <div className={classes.logo}>
+                <img className={classes.img} src={computerImage} alt="Computer"/>
             </div>
-            <h1>Computer Technology</h1>
-            <p>
+            <h1 className={classes['header-title']}>Computer Technology</h1>
+            <p className={classes.text}>
                 {getRandomPrefix()} computer concepts you will need to understand modern
                 computing systems!
             </p>
