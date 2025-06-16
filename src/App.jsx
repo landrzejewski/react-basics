@@ -1,4 +1,5 @@
 import computerImage from './assets/computer-tech.svg'
+import {CORE_CONCEPTS} from "./data.js";
 // import {Fragment} from "react";
 
 const prefixes = ['Fundamental', 'Core', 'Main'];
@@ -23,13 +24,50 @@ function Header() {
     );
 }
 
+function CoreConcept({title, description}) {
+    return (
+        <div>
+            <li>
+                <h3>{title}</h3>
+                <p>{description}</p>
+            </li>
+        </div>
+    )
+}
+
+/*function CoreConcept(props) {
+    return (
+        <div>
+            <li>
+                <h3>{props.title}</h3>
+                <p>{props.description}</p>
+            </li>
+        </div>
+    )
+}*/
+
 function App() {
     return (
         <>
-           <Header/>
-           <main>
-               <h2>Main section</h2>
-           </main>
+            <Header/>
+            <main>
+                <section id="core-concepts">
+                    <ul>
+                        {/*<CoreConcept
+                            title={CORE_CONCEPTS[0].title}
+                            description={CORE_CONCEPTS[0].description}
+                        />
+                        <CoreConcept {...CORE_CONCEPTS[1]}/>
+                        <CoreConcept {...CORE_CONCEPTS[2]}/>
+                        <CoreConcept {...CORE_CONCEPTS[3]}/>*/}
+                        {
+                            CORE_CONCEPTS.map(item  => (
+                                <CoreConcept key={item.title} {...item}/>
+                            ))
+                        }
+                    </ul>
+                </section>
+            </main>
         </>
     )
 }
