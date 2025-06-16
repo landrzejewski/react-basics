@@ -1,10 +1,10 @@
 import CoreConcept from './CoreConcept.jsx';
 import {CORE_CONCEPTS} from '../data.js';
+import Section from "./Section.jsx";
 
 function CoreConcepts() {
     return (
-        <section id="core-concepts">
-            <h2>Computer Fundamentals</h2>
+        <Section id="core-concepts" title="Computer Fundamentals" >
             <ul>
                 {
                     CORE_CONCEPTS.map(item => (
@@ -12,7 +12,8 @@ function CoreConcepts() {
                     ))
                 }
             </ul>
-        </section>
+        </Section>
+
     );
 }
 
