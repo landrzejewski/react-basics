@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 120" width="200" height="120">
+    {/* Monitor */}
+    <rect x="50" y="20" width="100" height="70" rx="5" fill="#1a1a1a" stroke="#0077cc" strokeWidth="2"/>
+    <rect x="55" y="25" width="90" height="55" rx="2" fill="#0a3048"/>
+
+    {/* Screen Content */}
+    <rect x="65" y="35" width="30" height="5" rx="1" fill="#00c3ff"/>
+    <rect x="65" y="45" width="70" height="5" rx="1" fill="#0077ff"/>
+    <rect x="65" y="55" width="50" height="5" rx="1" fill="#00c3ff"/>
+    <rect x="65" y="65" width="60" height="5" rx="1" fill="#0077ff"/>
+
+    {/* Stand */}
+    <rect x="85" y="90" width="30" height="5" fill="#1a1a1a"/>
+    <rect x="95" y="90" width="10" height="10" fill="#1a1a1a"/>
+
+    {/* Base */}
+    <ellipse cx="100" cy="100" rx="25" ry="5" fill="#1a1a1a" stroke="#0077cc" strokeWidth="1"/>
+
+    {/* CPU */}
+    <rect x="20" y="40" width="20" height="40" rx="2" fill="#1a1a1a" stroke="#0077cc" strokeWidth="1"/>
+    <rect x="22" y="45" width="16" height="5" rx="1" fill="#00c3ff"/>
+    <rect x="22" y="55" width="16" height="5" rx="1" fill="#00c3ff"/>
+    <rect x="22" y="65" width="16" height="5" rx="1" fill="#00c3ff"/>
+
+    {/* Connection */}
+    <path d="M40 60 L50 60" stroke="#0077cc" strokeWidth="2"/>
+</svg>
